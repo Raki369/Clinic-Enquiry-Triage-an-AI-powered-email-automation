@@ -1,0 +1,27 @@
+{
+  "note": "Paste ONE of the four arrays below at a time into the pinned output of the Basic LLM Chain node. These are short fake AI outputs used only to test the Code and Google Sheets nodes without using Gemini requests.",
+
+  "sample_1_urgent__expect_status_URGENT_review_now": [
+    {
+      "text": "{\"category\":\"Urgent/Clinical\",\"urgency\":\"High\",\"summary\":\"The sender reports severe chest pain and difficulty breathing.\",\"language\":\"English\",\"needs_human_review\":true,\"draft_reply\":\"Please call the emergency number 112 or go to the nearest emergency department immediately.\"}"
+    }
+  ],
+
+  "sample_2_needs_review__expect_status_Needs_review": [
+    {
+      "text": "{\"category\":\"General Info\",\"urgency\":\"Medium\",\"summary\":\"The sender provided a subject line but the body is empty.\",\"language\":\"English\",\"needs_human_review\":true,\"draft_reply\":\"Please resend your message with more details.\"}"
+    }
+  ],
+
+  "sample_3_spam__expect_status_No_action": [
+    {
+      "text": "{\"category\":\"Not a patient enquiry\",\"urgency\":\"Low\",\"summary\":\"Unsolicited advertising.\",\"language\":\"English\",\"needs_human_review\":false,\"draft_reply\":\"\"}"
+    }
+  ],
+
+  "sample_4_broken_output__expect_Parse_error_and_URGENT": [
+    {
+      "text": "Sorry, I am unable to help with that request."
+    }
+  ]
+}
